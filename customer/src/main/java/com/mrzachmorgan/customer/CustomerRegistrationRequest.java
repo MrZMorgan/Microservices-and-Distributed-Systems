@@ -1,4 +1,4 @@
-package com.mrzachmorgan;
+package com.mrzachmorgan.customer;
 
 public record CustomerRegistrationRequest(
     String firstName,

@@ -1,4 +1,5 @@
-package com.mrzachmorgan;
+package com.mrzachmorgan.fraud;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,25 +11,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+@Entity
+public class FraudCheckHistory {
 
     @Id
     @SequenceGenerator(
-        name = "customer_id_sequence",
+        name = "fraud_id_sequence",
         sequenceName = "customer_id_sequence"
     )
     @GeneratedValue(
         strategy = GenerationType.SEQUENCE,
-        generator = "customer_id_sequence"
+        generator = "fraud_id_sequence"
     )
     private Integer id;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private Integer customerId;
+    private Boolean isFraudster;
+    private LocalDateTime createdAt;
 }
