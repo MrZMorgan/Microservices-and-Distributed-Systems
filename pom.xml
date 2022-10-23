@@ -6,7 +6,11 @@
 
   <groupId>com.mrzachmorgan</groupId>
   <artifactId>morganservices</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>customer</module>
+  </modules>
 
   <name>morganservices</name>
   <url>http://www.example.com</url>
