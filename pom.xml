@@ -11,6 +11,7 @@
   <modules>
     <module>customer</module>
     <module>fraud</module>
+    <module>eureka-server</module>
   </modules>
 
   <name>morganservices</name>
@@ -21,6 +22,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <spring.boot.version>2.7.4</spring.boot.version>
+    <spring.cloud-version>2021.0.4</spring.cloud-version>
   </properties>
 
   <dependencyManagement>
@@ -31,6 +33,14 @@
         <version>${spring.boot.version}</version>
         <scope>import</scope>
         <type>pom</type>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring.cloud-version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
