@@ -1,4 +1,4 @@
-package com.mrzachmorgan.fraud;
+package com.mrzachmorgan.clients.fraud;
 
 public record FraudCheckResponse(
     boolean isFraudster
